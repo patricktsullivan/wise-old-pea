@@ -1,7 +1,6 @@
-Perfect! I've completed your Discord Events Bot with all the requested functionality. Here's a summary of what the bot now includes:
-Complete Feature Set:
-Event Types Supported:
+Wise Old Pea Discord Bot
 
+Event Types Supported:
 Multiple Challenges - Staggered challenges released at set intervals
 Experience Gained - Tracks OSRS XP via WiseOldMan API
 Bosses Killed - Tracks boss kills via WiseOldMan API
