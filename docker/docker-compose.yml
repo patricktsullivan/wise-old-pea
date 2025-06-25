@@ -1,0 +1,57 @@
+# Wise Old Pea Bot - Docker Compose
+version: '3.8'
+
+services:
+  wise-old-pea-bot:
+    build: .
+    container_name: wise-old-pea-bot
+    restart: unless-stopped
+    
+    # Environment variables
+    environment:
+      - PYTHONUNBUFFERED=1
+    
+    # Load environment from .env file
+    env_file:
+      - .env
+    
+    # Mount volumes for persistent data
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./challenge_rules.json:/app/challenge_rules.json:ro
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+        reservations:
+          memory: 256M
+          cpus: '0.1'
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; exit(0 if os.path.exists('data/wise_old_pea_data.json') else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+# Optional: Set up networks if needed
+networks:
+  default:
+    driver: bridge
+
+# Optional: Named volumes for backup/migration
+volumes:
+  bot_data:
+    driver: local

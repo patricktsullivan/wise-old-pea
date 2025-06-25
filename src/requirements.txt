@@ -1,0 +1,27 @@
+# Wise Old Pea Bot Dependencies
+# This file specifies all Python packages required for the bot to function properly
+
+# Discord API Interface
+# Provides the connection between your bot and Discord's servers
+# Version 2.3+ required for modern Discord features and security
+discord.py>=2.3.0
+
+# Environment Variable Management  
+# Allows secure storage of sensitive configuration like bot tokens
+# Reads .env files and makes variables available to the application
+python-dotenv>=1.0.0
+
+# Additional useful packages for development and debugging
+# These are optional but recommended for enhanced functionality
+
+# Enhanced logging and debugging (optional)
+# colorlog>=6.7.0
+
+# JSON schema validation (optional, for validating challenge_rules.json)
+# jsonschema>=4.17.0
+
+# Date/time utilities (optional, for enhanced time handling)
+# python-dateutil>=2.8.0
+
+# Note: Python 3.8+ is required as specified in the launcher script
+# The bot uses modern Python features that require this minimum version

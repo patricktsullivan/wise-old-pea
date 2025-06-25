@@ -1,0 +1,536 @@
+{
+    "challenges": [
+        {
+            "display_name": "Pea's Place",
+            "name": "peas_place",
+            "type": "speed_run",
+            "rules": "Find each location as quickly as possible. You will be given a zoomed-in screenshot of my character standing somewhere. Every X minutes, you will get 10% more of the zoomed-out screenshot. Submit a screenshot to finish each location. You can skip a stage with !skip, but you'll receive a score of 10 minutes or your time + 5 minutes, whichever is longer at the time of the skip.",
+            "title_card": "https://i.imgur.com/TbI1kwC.png",
+            "skip": "yes",
+            "information": [
+                {
+                    "1.1": "https://i.imgur.com/aWjPhJ3.png",
+                    "1.2": "https://i.imgur.com/zRmCa1i.png",
+                    "1.3": "https://i.imgur.com/77DV9YI.png",
+                    "1.4": "https://i.imgur.com/ido014d.png",
+                    "1.5": "https://i.imgur.com/AR0J5Ey.png"
+                },
+                {
+                    "2.1": "https://i.imgur.com/RJp0d6F.png",
+                    "2.2": "https://i.imgur.com/0JAmsMA.png",
+                    "2.3": "https://i.imgur.com/3olOT7O.png",
+                    "2.4": "https://i.imgur.com/zaILoS1.png",
+                    "2.5": "https://i.imgur.com/epnXON5.png"
+                },
+                {
+                    "3.1": "https://i.imgur.com/JYhd4uf.png",
+                    "3.2": "https://i.imgur.com/QwBqDBd.png",
+                    "3.3": "https://i.imgur.com/p5pHjUV.png",
+                    "3.4": "https://i.imgur.com/mckkMhG.png",
+                    "3.5": "https://i.imgur.com/8OzK9FE.png"
+                },
+                {
+                    "4.1": "https://i.imgur.com/EuJtruq.png",
+                    "4.2": "https://i.imgur.com/FRrnSYH.png",
+                    "4.3": "https://i.imgur.com/WlDRIR0.png",
+                    "4.4": "https://i.imgur.com/IMIHdwL.png",
+                    "4.5": "https://i.imgur.com/4IdmNHe.png"
+                },
+                {
+                    "5.1": "https://i.imgur.com/BvxdIRq.png",
+                    "5.2": "https://i.imgur.com/R9jWmQR.png",
+                    "5.3": "https://i.imgur.com/ZnBZ36C.png",
+                    "5.4": "https://i.imgur.com/hiX8inA.png",
+                    "5.5": "https://i.imgur.com/aiWiA6t.png"
+                },
+                {
+                    "6.1": "https://i.imgur.com/u2Dabmo.png",
+                    "6.2": "https://i.imgur.com/SE9CgQ5.png",
+                    "6.3": "https://i.imgur.com/CGKLf2W.png",
+                    "6.4": "https://i.imgur.com/sfptyVT.png",
+                    "6.5": "https://i.imgur.com/Pwz3Yyy.png"
+                },
+                {
+                    "7.1": "https://i.imgur.com/2XeuGgh.png",
+                    "7.2": "https://i.imgur.com/qJXJTKQ.png",
+                    "7.3": "https://i.imgur.com/Q9qTJfo.png",
+                    "7.4": "https://i.imgur.com/PAqV0fG.png",
+                    "7.5": "https://i.imgur.com/IfqwZCf.png"
+                },
+                {
+                    "8.1": "https://i.imgur.com/0FhFO0X.png",
+                    "8.2": "https://i.imgur.com/bJ4o0Lq.png",
+                    "8.3": "https://i.imgur.com/SnG6V50.png",
+                    "8.4": "https://i.imgur.com/LHbFlnr.png",
+                    "8.5": "https://i.imgur.com/rjdGBI1.png"
+                },
+                {
+                    "9.1": "https://i.imgur.com/lSVZR0A.png",
+                    "9.2": "https://i.imgur.com/M3SlauI.png",
+                    "9.3": "https://i.imgur.com/NqV7hfP.png",
+                    "9.4": "https://i.imgur.com/tC2cYwM.png",
+                    "9.5": "https://i.imgur.com/odZFbVe.png"
+                },
+                {
+                    "10.1": "https://i.imgur.com/ZImR5zZ.png",
+                    "10.2": "https://i.imgur.com/av3ghl3.png",
+                    "10.3": "https://i.imgur.com/L6pGtQg.png",
+                    "10.4": "https://i.imgur.com/Rku91Cv.png",
+                    "10.5": "https://i.imgur.com/0L3cGEm.png"
+                }
+            ],
+            "location": "DM"
+        },
+        {
+            "display_name": "Scape Smarts",
+            "name": "scape_smarts",
+            "type": "trivia",
+            "rules": "Answer OSRS trivia questions correctly.\n\nPing _pea if the bot gets one of your answers wrong, lol",
+            "title_card": "https://i.imgur.com/wd66Umb.png",
+            "information": [
+                {
+                    "number": "1",
+                    "q": "General Graardor is:",
+                    "o": ["an Ogre", "a Giant", "a Zogre", "an Ourg"],
+                    "a": ["an Ourg","Ourg","D"],
+                    "type": "multiple_acceptable"
+                },
+                {
+                    "number": "2",
+                    "q":"Which of the following is not an item you can get from a Mystery Box?",
+                    "o":[
+                        "Stale Baguette", "Rune sq Shield", "Emerald", "Uncut Diamond"
+                    ],
+                    "a":["Emerald", "C"],
+                    "type": "multiple_acceptable"
+                },
+                {
+                    "number": "3",
+                    "q":"What year did Old School Runescape release on Mobile?",
+                    "a":"2018",
+                    "type": "exact_match"
+                },
+                {
+                    "number": "4",
+                    "q":"“Newspaper Enthusiast” is a combat achievement for which of the following:",
+                    "o":[
+                        "Killing Araxxor 10 times", "Killing Sarachnis with a Crush weapon", "Killing Venenatis 50 times", "None of the above, it's a Slayer Rewards unlock"
+                    ],
+                    "a":["Killing Sarachnis with a Crush weapon", "Sarachnis", "B"],
+                    "type": "multiple_acceptable"
+                },
+                {
+                    "number": "5",
+                    "q":"How many different Team Capes are in the game?",
+                    "a":"53",
+                    "p":"50 from Cape Merchants and 3 from Easy Clue Scrolls (Team Capes i, x, and zero)",
+                    "type": "exact_match"
+                },
+                {
+                    "number": "6",
+                    "q":"Correctly order the rarity of Shade Keys: Black, Red, Purple, Gold, Brown, Crimson",
+                    "a":"Red, Brown, Crimson, Black, Purple, Gold",
+                    "type": "ordered_list"
+                },
+                {
+                    "number": "7",
+                    "q":"Which of the following is not a type of Spectre in OSRS?",
+                    "o":[
+                        "Ghostly", "Repugnant", "Abhorrent", "Deviant"
+                    ],
+                    "a":["Ghostly","A"],
+                    "type": "multiple_acceptable"
+                },
+                {
+                    "number": "8",
+                    "q": "Which of the following are berries available in Old School Runescape?\nAnswer with a comma-separated list.",
+                    "o": [
+                        "Redberries", "Blueberries", "Cadava Berries", "Jangerberries", "Tomberries", "Blackberries", "Raspberries", "Watermelon", "Pharmakos berries", "White Berries"
+                    ],
+                    "a": [
+                        "Redberries", "Cadava Berries", "Jangerberries", "Watermelon", "Pharmakos berries", "White Berries"
+                    ],
+                    "type": "list_exact"
+                },
+                {
+                    "number": "9",
+                    "q":"“Extended Encounter” is a combat achievement for:",
+                    "o":[
+                        "Killing the Phantom Muspah 10 times in one trip", "Killing the Royal Titans 15 times without anyone leaving the instance", "Killing 30 Moons of Peril bosses without leaving the dungeon", "Killing Vorkath 10 times without leaving his area"
+                    ],
+                    "a":["Killing Vorkath 10 times without leaving his area", "Vorkath", "D"],
+                    "type": "multiple_acceptable"
+                },
+                {
+                    "number": "10",
+                    "q":"How many total runes do you need to cast the following spells?\n\nSaradomin Strike, Skeletal Grasp, Enchant Crossbow Bolt (Diamond), and Weaken",
+                    "a":"36",
+                    "p": "Saradomin Strike is 4 Air, 2 Fire, 2 Blood,\nSkeletal Grasp is 8 Earth, 1 Death, \nEnchant Crossbow Bolt (Diamond) is 10 Earth, 1 Cosmic, 2 Law, and \nWeaken is 2 Earth, 3 Water, 1 Body",
+                    "type": "exact_match"
+                },
+                {
+                    "number": "11",
+                    "q":"Which sort of berry is used to create a cure for The Strangler?",
+                    "o":[
+                        "Pharmakos berries", "Watermelon", "Tomberries", "Argian berries"
+                    ],
+                    "a":["Argian berries","D", "Argian"],
+                    "type": "multiple_acceptable"
+                },
+                {
+                    "number": "12",
+                    "q":"Which of the following is not an option for the player's heraldry from Sir Renitee?",
+                    "o":[
+                        "Money", "Ham", "Kourend", "Jogre"
+                    ],
+                    "a":["Kourend", "C"],
+                    "type": "multiple_acceptable"
+                },
+                {
+                    "number": "13",
+                    "q": "As of the most recent stat posting (13 December 2023), which pet is the most common in the game?\nThe least common?",
+                    "a": {
+                        "common": "Rocky",
+                        "rare": "Penance Queen"
+                    },
+                    "type": "dictionary_match"
+                },
+                {
+                    "number": "14",
+                    "q":"Which of the following is not an option for a portrait in your POH?",
+                    "o":[
+                        "King Arthur", "King Roald", "Giant Dwarf", "Elena"
+                    ],
+                    "a":["King Roald", "B"],
+                    "type": "multiple_acceptable"
+                },
+                {
+                    "number": "15",
+                    "q": "Name three things that can be requested by the Wise Old Man when he assigns you a task.\nAnswer with a comma-separated list.",
+                    "a": [
+                        "Anchovies", "Beer glass", "Bones", "Bronze arrow", "Bronze bar", 
+                        "Bronze dagger", "Bronze axe", "Bronze mace", "Bronze med helm", 
+                        "Bronze spear", "Bronze sword", "Beer", "Cadava berries", 
+                        "Cooked chicken", "Cooked meat", "Copper ore", "Cowhide", "Egg", 
+                        "Feather", "Grain", "Iron bar", "Iron mace", "Iron ore", "soft clay", 
+                        "leather gloves", "logs", "molten glass", "potato", "raw rat meat", 
+                        "rune essence", "pure essence", "shrimps", "silk", "leather", 
+                        "tin ore", "ball of wool", "bow string", "bread", "bronze arrowtips", 
+                        "iron knife", "iron warhammer", "leather cowl", "pot of flour", 
+                        "unfired pie dish", "unfired pot", "leather boots"
+                    ],
+                    "type": "list_any_count",
+                    "min_count": 3
+                },
+                {
+                    "number": "16",
+                    "q": "Rank these activities from Least to Most Lucrative as reported by the OSRS Wiki's Money Making Guides:\nAnswer with a comma-separated list.",
+                    "o": [
+                        "Buying Iron Ore from Ordan", "Making Toy Cats", 
+                        "Pickpocketing Master Farmers", "Killing Gargoyles"
+                    ],
+                    "a": "D, C, B, A",
+                    "type": "ordered_list",
+                    "p": "Killing Gargoyles (833,000), \nPickpocketing Master Farmers (996,000), \nMaking Toy Cats (1,220,000), and \nBuying Iron Ore from Ordan (1,257,000)"
+                },
+                {
+                    "number": "17",
+                    "q": "Which of the following Kingdom - Leader pairs is incorrect?",
+                    "o": [
+                        "Tai Bwo Wannai - Timfraku", "Morytania - Lord Draken", 
+                        "Weiss - Mother", "Cam Torum - Highlord Katlo", 
+                        "Bedabin Nomads - Al Shabim", "Varlamore - Servius, Teokan of Ralos"
+                    ],
+                    "a": [
+                        "F", "C", "Varlamore - Servius, Teokan of Ralos", "Varlamore",
+                        "Servius", "Servius, Teokan of Ralos", "Weiss - Mother", 
+                        "Weiss", "Mother"
+                    ],
+                    "type": "multiple_acceptable",
+                    "p": "Varlamore is Queen Zyanyi Arkan. \n\nIf you have finished Making Friends with My Arm, the leader of Weiss is Snowflake"
+                },
+                {
+                    "number": "18",
+                    "q": "Name 3 Gods you would not find in the God Wars Dungeon.\nThat is, not any of Guthix, Saradomin, Zamorak, Armadyl, Bandos, or Zaros.\nAnswer with a comma-separated list.",
+                    "a": [
+                        "Tumeken", "Elidinis", "Icthlarin", "Amascut", "Apmeken", 
+                        "Crondis", "Het", "Scabaras", "Ralos", "Ranul", "Jas", "Ful", 
+                        "Mother of Seren", "Marimbo", "Brassica Prime", "V", "Karamajan gods"
+                    ],
+                    "type": "list_any_count",
+                    "min_count": 3
+                },
+                {
+                    "number": "19",
+                    "q": "Name 3 Bars, Pubs, or Taverns. \nAnswer with a comma-separated list.",
+                    "a": [
+                        "Atlazora's Rest", "The Asp & Snake Bar", "The Big Heist Lodge", 
+                        "Blue Moon Inn", "Blurberry Bar", "The Cloak and Stagger", 
+                        "The Crypt", "Dancing Donkey Inn", "Dead Man's Chest", 
+                        "The Deeper Lode", "Dragon Inn", "The Esoterican Arms", 
+                        "Fight Arena Bar", "The Flaming Arrow", "Flying Horse Inn", 
+                        "Forester's Arms", "The Golden Field", "The Green Ghost", 
+                        "Hair of the Dog", "Harpoon Joe's House of 'Rum'", "Hefin Inn", 
+                        "Jolly Boar Inn", "Karamja Wines, Spirits, and Beers", 
+                        "King's Axe Inn", "Laughing Miner Pub", "The Long Hall", 
+                        "The Legless Faun", "The Lost Pickaxe", "The Old Nite", 
+                        "The Other Inn", "Paramaya Inn", "Falador Party Room", 
+                        "Rat & Bat", "Ratpit Bar", "Rellekka Longhall Bar", 
+                        "Rising Sun Inn", "Rusty Anchor Inn", "The Sheared Ram", 
+                        "Skull in a Chest Inn", "Stick Your Ore Inn", "Sunlight's Sanctum", 
+                        "The Toad and Chicken", "The Warrens Pub", "White Wolf Tunnel"
+                    ],
+                    "type": "list_any_count",
+                    "min_count": 3
+                },
+                {
+                    "number": "20",
+                    "q": "What is the max Mage gear setup in F2P?\nAnswer with a comma-separated list in the order: head, neck, body, legs, weapon",
+                    "a": {
+                        "head": ["Wizard hat", "Blue wizard hat"],
+                        "neck": "Amulet of Magic",
+                        "body": "Wizard robe",
+                        "legs": "Zamorak monk bottom",
+                        "weapon": "Bryophyta's staff"
+                    },
+                    "type": "gear_setup"
+                }
+            ],
+            "location": "DM"
+        },
+        {
+            "display_name": "TzTik-TzTok",
+            "name": "tztik_tztok",
+            "type": "speed_run",
+            "rules": "Complete the Fight Caves as quickly as possible using the least possible amount of money on gear and resources. Your score is a weighted average of your time and budget against every other participant. Share a screenshot of your completion time and your inventory/gear setup with the price checker.",
+            "title_card": "https://i.imgur.com/GaS6jq9.png"
+        },
+        {
+            "display_name": "Alchemy, Old School Magic",
+            "name": "alchemy_old_school_magic",
+            "type": "race",
+            "duration": "60",
+            "rules": "You have 60 minutes to create as much high alch value as possible. You start in (LOCATION) with nothing in your inventory. Submit a screenshot of your final gold pile.",
+            "title_card": "https://i.imgur.com/GaMumuf.png"
+                            
+        },
+        {
+            "display_name": "Spawn Camping",
+            "name": "spawn_camping",
+            "type": "race",
+            "duration": "60",
+            "rules": "You have 60 minutes to unscramble the list of anagrams and find the item spawns. Beginning at Lumbridge spawn, match your inventory to the photo provided. Share a screenshot of your inventory when you finish.",
+            "title_card": "https://i.imgur.com/HfdPwDx.png",
+            "information": [
+                "dark tan",
+                "a dock emote",
+                "rashes",
+                "coats fly",
+                "acrobat fluttering top",
+                "agile grind scram",
+                "cherish chili iou",
+                "blare set",
+                "brazen poser",
+                "reheat urn",
+                "my pc steak",
+                "snag spears",
+                "abc bendy horizon",
+                "glad orb",
+                "gate shoveller",
+                "grin her",
+                "knot orbs poem",
+                "aunt raw",
+                "censor wet",
+                "cams fake"
+            ],
+            "location": "DM"
+        },
+        {
+            "display_name": "Prop Hunt",
+            "name": "prop_hunt",
+            "type": "minigame",
+            "rules": "Add the \"Prop Hunt\" plugin to Runelite, pick a chunk (64x64 tile section) of the map, and message _pea. You'll have 5 minutes to hide as a prop in the area. Stay hidden for as long as possible.\n\nProp Hunt Plugin at https://runelite.net/plugin-hub/show/prop-hunt, and you can find your chunk by adding the Region Locker Plugin from https://runelite.net/plugin-hub/show/region-locker.",
+            "title_card": "https://i.imgur.com/MNAEqbY.png.png"
+        },
+        {
+            "display_name": "Alphabet Soup",
+            "name": "alphabet_soup",
+            "type": "race",
+            "duration": "20",
+            "rules": "You have 20 minutes to kill an NPC for each letter of the alphabet. Submit screenshots from your loot tracker, or from you killing each NPC.",
+            "title_card": "https://i.imgur.com/WMvebiU.png"
+        },
+        {
+            "display_name": "EXP Share the Love",
+            "name": "exp_share_the_love",
+            "type": "speed_run",
+            "rules": "Gain experience in every skill as quickly as possible. Reset your EXP Tracker to start, and submit a screenshot of the tracker when you finish.",
+            "title_card": "https://i.imgur.com/mbBzgxU.png"
+        },
+        {
+            "display_name": "Pea's Place",
+            "name": "peas_place",
+            "type": "speed_run",
+            "rules": "Find each location as quickly as possible. You will be given a zoomed-in screenshot of my character standing somewhere. Every X minutes, you will get 10% more of the zoomed-out screenshot. Submit a screenshot to finish each location. You can skip a stage with !skip, but you'll receive a score of 10 minutes or your time + 5 minutes, whichever is longer at the time of the skip.",
+            "title_card": "https://i.imgur.com/TbI1kwC.png",
+            "skip": "yes",
+            "information": [
+                {
+                    "1.1": "https://i.imgur.com/aWjPhJ3.png",
+                    "1.2": "https://i.imgur.com/zRmCa1i.png",
+                    "1.3": "https://i.imgur.com/77DV9YI.png",
+                    "1.4": "https://i.imgur.com/ido014d.png",
+                    "1.5": "https://i.imgur.com/AR0J5Ey.png"
+                },
+                {
+                    "2.1": "https://i.imgur.com/RJp0d6F.png",
+                    "2.2": "https://i.imgur.com/0JAmsMA.png",
+                    "2.3": "https://i.imgur.com/3olOT7O.png",
+                    "2.4": "https://i.imgur.com/zaILoS1.png",
+                    "2.5": "https://i.imgur.com/epnXON5.png"
+                },
+                {
+                    "3.1": "https://i.imgur.com/JYhd4uf.png",
+                    "3.2": "https://i.imgur.com/QwBqDBd.png",
+                    "3.3": "https://i.imgur.com/p5pHjUV.png",
+                    "3.4": "https://i.imgur.com/mckkMhG.png",
+                    "3.5": "https://i.imgur.com/8OzK9FE.png"
+                },
+                {
+                    "4.1": "https://i.imgur.com/EuJtruq.png",
+                    "4.2": "https://i.imgur.com/FRrnSYH.png",
+                    "4.3": "https://i.imgur.com/WlDRIR0.png",
+                    "4.4": "https://i.imgur.com/IMIHdwL.png",
+                    "4.5": "https://i.imgur.com/4IdmNHe.png"
+                },
+                {
+                    "5.1": "https://i.imgur.com/BvxdIRq.png",
+                    "5.2": "https://i.imgur.com/R9jWmQR.png",
+                    "5.3": "https://i.imgur.com/ZnBZ36C.png",
+                    "5.4": "https://i.imgur.com/hiX8inA.png",
+                    "5.5": "https://i.imgur.com/aiWiA6t.png"
+                },
+                {
+                    "6.1": "https://i.imgur.com/u2Dabmo.png",
+                    "6.2": "https://i.imgur.com/SE9CgQ5.png",
+                    "6.3": "https://i.imgur.com/CGKLf2W.png",
+                    "6.4": "https://i.imgur.com/sfptyVT.png",
+                    "6.5": "https://i.imgur.com/Pwz3Yyy.png"
+                },
+                {
+                    "7.1": "https://i.imgur.com/2XeuGgh.png",
+                    "7.2": "https://i.imgur.com/qJXJTKQ.png",
+                    "7.3": "https://i.imgur.com/Q9qTJfo.png",
+                    "7.4": "https://i.imgur.com/PAqV0fG.png",
+                    "7.5": "https://i.imgur.com/IfqwZCf.png"
+                },
+                {
+                    "8.1": "https://i.imgur.com/0FhFO0X.png",
+                    "8.2": "https://i.imgur.com/bJ4o0Lq.png",
+                    "8.3": "https://i.imgur.com/SnG6V50.png",
+                    "8.4": "https://i.imgur.com/LHbFlnr.png",
+                    "8.5": "https://i.imgur.com/rjdGBI1.png"
+                },
+                {
+                    "9.1": "https://i.imgur.com/lSVZR0A.png",
+                    "9.2": "https://i.imgur.com/M3SlauI.png",
+                    "9.3": "https://i.imgur.com/NqV7hfP.png",
+                    "9.4": "https://i.imgur.com/tC2cYwM.png",
+                    "9.5": "https://i.imgur.com/odZFbVe.png"
+                },
+                {
+                    "10.1": "https://i.imgur.com/ZImR5zZ.png",
+                    "10.2": "https://i.imgur.com/av3ghl3.png",
+                    "10.3": "https://i.imgur.com/L6pGtQg.png",
+                    "10.4": "https://i.imgur.com/Rku91Cv.png",
+                    "10.5": "https://i.imgur.com/0L3cGEm.png"
+                }
+            ],
+            "location": "DM"
+        },
+        {
+            "display_name": "Shopping List",
+            "name": "shopping_list",
+            "type": "race",
+            "duration": "30",
+            "rules": "You have 30 minutes to match your inventory to the one given to you. Take a screenshot to show what you were able to find.",
+            "title_card": "https://i.imgur.com/veGseYB.png",
+            "information": [
+                "https://i.imgur.com/f73o5mV.png"
+            ],
+            "location": "DM"
+        },
+        {
+            "display_name": "Chronic Wasting Disease",
+            "name": "chronic_wasting_disease",
+            "type": "survival",
+            "rules": "Survive against Corrupted Hunllef for as long as possible. Drop everything in your inventory and enter directly into the fight. No gear, no food, no attacking. Just run and pray.",
+            "title_card": "https://i.imgur.com/5G8xIx4.png"
+        },
+        {
+            "display_name": "Tickets, Get Your Tickets Here",
+            "name": "tickets_here",
+            "type": "pvp",
+            "duration": "30",
+            "rules": "You have 30 minutes to score as many tickets as possible in the Brimhaven Agility Arena. You'll play with other members of the clan on a PVP world. Binds and Dragon Spear special attacks are legal.",
+            "title_card": "https://i.imgur.com/ugjVu5H.png"
+        },
+        {
+            "display_name": "Another Run Through Hell",
+            "name": "through_hell",
+            "type": "pvp",
+            "rules": "Race against your clan mates through the Underground pass as quickly as possible a on a PVP world. Binds and Dragon Spear special attacks are legal.",
+            "title_card": "https://i.imgur.com/nHQTlWX.png"
+        },
+        {
+            "display_name": "Final Examine",
+            "name": "final_examine",
+            "type": "speed_run",
+            "rules": "Find the NPC or Item described by the given Examine text as quickly as possible. Submit a screenshot of you standing with the target along with your !next command. You can skip a stage with !skip, but you'll receive a score of 10 minutes or your time + 5 minutes, whichever is longer at the time of the skip.",
+            "title_card": "https://i.imgur.com/RwaFd5o.png",
+            "skip": "yes",
+            "information":{
+                "1":"Head servant for Prince Anlaf",
+                "2":"Phew! Smells awfully like Brimstone... Better keep my mouth closed.",
+                "3":"A baby sea snake. Snaaaaaaake!",
+                "4":"A burning candle on an interesting stand.",
+                "5":"A tradesman with a mind for the art of battle.",
+                "6":"A siren from the far east.",
+                "7":"The 'brb' message of trees.",
+                "8":"A master of necromancy!",
+                "9":"Riiiiiight?",
+                "10":"The ingredients for the rum go in here.",
+                "11":"A nice nest.",
+                "12":"Yep, definitely a chicken... an undead chicken.",
+                "13":"Manufacturer of fine leathers, in a dungeon..?",
+                "14":"Serving spices ranging from mild to 'I can't feel my tongue!'",
+                "15":"Looks like he could do with a sip of amontillado.",
+                "16":"Makes sculptures.",
+                "17":"He must find gardening difficult since the accident.",
+                "18":"Source of the capybaras' nutritious diet.",
+                "19":"Need a net? Here's Annette.",
+                "20":"For taking fruit to the market.",
+                "21":"The rarest cat in all of Varlamore.",
+                "22":"I've met less intelligent conversationalists.",
+                "23":"I could get a beer from him.",
+                "24":"An enormous majestic tree.",
+                "25":"A guardian of the arena."
+            },
+            "location": "DM"
+        }, 
+        {
+            "display_name": "Spellbook Swap",
+            "name": "spellbook_swap",
+            "type": "speed_run",
+            "rules": "Starting at the Fortis Colosseum, you must race to cast a spell from each of the four spell books. You cannot use your bank, your POH, or any gear or inventory to start. One home teleport spell is allowed.",
+            "title_card": "https://i.imgur.com/pVdT2yj.png"
+        },
+        {
+            "display_name": "Snaaaaakes",
+            "name": "snakes",
+            "type": "minigame",
+            "rules": "Using the the \"Snake\" plugin on Runelite, you have 3 attempts to get the best score possible. Submit a screenshot of each attempt.\n\nhttps://runelite.net/plugin-hub/show/snake.\nPlease add the plugin from the link to Runelite for this challenge.",
+            "title_card": "https://i.imgur.com/MW1P8Zr.png"
+        }
+    ]
+}
