@@ -532,7 +532,7 @@ class AdminCommands(commands.Cog):
         else:
             await ctx.send("❌ Could not find Pea's Place challenge.")
 
-    # Add this debug command too:
+    # Pea's Place Debugging Commands:
 
     @commands.command(name='peas_place_debug')
     async def peas_place_debug(self, ctx, username: str):
@@ -592,6 +592,7 @@ class AdminCommands(commands.Cog):
         
         await ctx.send(embed=embed)
 
+    # CURRENTLY BROKEN
     @commands.command(name='debug_media')
     async def debug_media(self, ctx, location: str, stage: str):
         """
@@ -638,7 +639,7 @@ class AdminCommands(commands.Cog):
         
         await ctx.send(f"❌ Media key `{media_key}` not found in any information object")
 
-    # Also add this command to list all available media:
+    # CURRENTLY BROKEN
     @commands.command(name='list_media')
     async def list_media(self, ctx):
         """
