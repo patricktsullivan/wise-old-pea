@@ -8,7 +8,7 @@ from discord.ext import commands
 import datetime
 import logging
 import re
-from typing import Optional
+from typing import Optional, Dict
 
 from database import Database
 from event_manager import EventManager
@@ -528,47 +528,78 @@ class UserCommands(commands.Cog):
         # Handle skipping based on challenge type
         challenge_data = self.db.get_user_challenge_data(active_event, user_id, challenge['name'])
         
-        # Special case for Pea's Place
-        if challenge['name'] ==  'peas_place':
-            # Skip stage for location
-            logger.debug(f"{ctx.author} skipped stage in the Pea's Place function")
+        # Special case for Pea's Place with list-of-lists structure
+        if challenge['name'] == 'peas_place':
+            await self._handle_peas_place_skip(ctx, challenge, challenge_data, active_event, user_id)
+        else:
+            await self._handle_generic_skip(ctx, challenge, challenge_data, active_event, user_id)
+        
+        logger.info(f"{ctx.author} used skip in challenge {challenge['display_name']}")
+
+    async def _handle_peas_place_skip(self, ctx, challenge: Dict, challenge_data: Dict, active_event: str, user_id: str):
+        """Handle skipping for Pea's Place using list structure"""
+        current_stage = challenge_data.get('stage', '1.1')
+        logger.debug(f"{ctx.author} attempting to skip Pea's Place stage {current_stage}")
+        
+        try:
+            # Parse current stage (e.g., "1.1" -> location 1, stage 1)
+            location, stage = current_stage.split('.')
+            location_num = int(location)
+            stage_num = int(stage)
+            
+            # Calculate next stage within same location
+            next_stage_num = stage_num + 1
+            
+            # Check if next stage exists in current location
+            information = challenge.get('information', [])
+            location_index = location_num - 1  # Convert to 0-based index
+            
+            if (location_index < len(information) and 
+                isinstance(information[location_index], list) and 
+                next_stage_num <= len(information[location_index])):
+                
+                # Advance to next stage within location
+                next_stage = f"{location_num}.{next_stage_num}"
+                challenge_data['stage'] = next_stage
+                challenge_data['last_stage_time'] = datetime.datetime.now(datetime.UTC)
+                self.db.save_database()
+                
+                # Get handler and send next media
+                handler = self.challenge_factory.get_handler(challenge)
+                success = await handler.send_peas_place_media(
+                    ctx.author, challenge, str(location_num), str(next_stage_num), active_event
+                )
+                
+                if success:
+                    max_stages = len(information[location_index])
+                    await ctx.send(f"⏭️ Skipped to stage {next_stage_num}/{max_stages} for location {location_num}.")
+                else:
+                    await ctx.send("❌ Error loading next stage. Please contact an admin.")
+            else:
+                await ctx.send("🏁 You're already at the final stage for this location!")
+                
+        except (ValueError, IndexError) as e:
+            logger.error(f"Error parsing Pea's Place stage '{current_stage}': {e}")
+            await ctx.send("❌ Error processing skip request. Please contact an admin.")
+
+    async def _handle_generic_skip(self, ctx, challenge: Dict, challenge_data: Dict, active_event: str, user_id: str):
+        """Handle skipping for other speed_run challenges with information dictionary"""
+        if challenge['type'] == 'speed_run' and 'information' in challenge:
+            logger.debug(f"{ctx.author} skipped stage in {challenge['display_name']}")
             information = challenge.get('information', {})
             current_stage = challenge_data.get('stage', '1')
-            next_stage = str(float(current_stage) + 0.1)
-            logger.debug(f"next_stage: {next_stage}")
-            logger.debug(f"information: {information}")
-            logger.debug(f"next_stage in location for location in information: {any(next_stage in location for location in information)}")
-
-            if any(next_stage in location for location in information):
+            next_stage = str(int(current_stage) + 1)
+            
+            if next_stage in information:
                 challenge_data['stage'] = next_stage
                 self.db.save_database()
                 
                 # Get handler and send next info
                 handler = self.challenge_factory.get_handler(challenge)
-                # await handler.send_speed_run_info(ctx.author, challenge, next_stage)
-                await handler.send_peas_place_media(self, ctx.author, challenge, next_stage, active_event)
+                await handler.send_speed_run_info(ctx.author, challenge, next_stage)
                 await ctx.send("⏭️ Skipped to next stage.")
             else:
                 await ctx.send("🏁 You're already at the final stage!")
-
-
         else:
-            if challenge['type'] == 'speed_run' and 'information' in challenge:
-                logger.debug(f"{ctx.author} skipped stage in {challenge['display_name']}")
-                information = challenge.get('information', {})
-                current_stage = challenge_data.get('stage', '1')
-                next_stage = str(int(current_stage) + 1)
-                
-                if next_stage in information:
-                    challenge_data['stage'] = next_stage
-                    self.db.save_database()
-                    
-                    # Get handler and send next info
-                    handler = self.challenge_factory.get_handler(challenge)
-                    await handler.send_speed_run_info(ctx.author, challenge, next_stage)
-                    await ctx.send("⏭️ Skipped to next stage.")
-                else:
-                    await ctx.send("🏁 You're already at the final stage!")
-        
-        logger.info(f"{ctx.author} used skip in challenge {challenge['display_name']}")
+            await ctx.send("❌ This challenge type doesn't support skipping.")
 
