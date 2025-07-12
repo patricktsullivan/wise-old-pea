@@ -1,87 +1,6 @@
 {
     "challenges": [
         {
-            "display_name": "Pea's Place",
-            "name": "peas_place",
-            "type": "speed_run",
-            "rules": "Find each location as quickly as possible. You will be given a zoomed-in screenshot of my character standing somewhere. Every X minutes, you will get 10% more of the zoomed-out screenshot. Submit a screenshot to finish each location. You can skip a stage with !skip, but you'll receive a score of 10 minutes or your time + 5 minutes, whichever is longer at the time of the skip.",
-            "title_card": "https://i.imgur.com/TbI1kwC.png",
-            "skip": "yes",
-            "information": [
-                {
-                    "1.1": "https://i.imgur.com/aWjPhJ3.png",
-                    "1.2": "https://i.imgur.com/zRmCa1i.png",
-                    "1.3": "https://i.imgur.com/77DV9YI.png",
-                    "1.4": "https://i.imgur.com/ido014d.png",
-                    "1.5": "https://i.imgur.com/AR0J5Ey.png"
-                },
-                {
-                    "2.1": "https://i.imgur.com/RJp0d6F.png",
-                    "2.2": "https://i.imgur.com/0JAmsMA.png",
-                    "2.3": "https://i.imgur.com/3olOT7O.png",
-                    "2.4": "https://i.imgur.com/zaILoS1.png",
-                    "2.5": "https://i.imgur.com/epnXON5.png"
-                },
-                {
-                    "3.1": "https://i.imgur.com/JYhd4uf.png",
-                    "3.2": "https://i.imgur.com/QwBqDBd.png",
-                    "3.3": "https://i.imgur.com/p5pHjUV.png",
-                    "3.4": "https://i.imgur.com/mckkMhG.png",
-                    "3.5": "https://i.imgur.com/8OzK9FE.png"
-                },
-                {
-                    "4.1": "https://i.imgur.com/EuJtruq.png",
-                    "4.2": "https://i.imgur.com/FRrnSYH.png",
-                    "4.3": "https://i.imgur.com/WlDRIR0.png",
-                    "4.4": "https://i.imgur.com/IMIHdwL.png",
-                    "4.5": "https://i.imgur.com/4IdmNHe.png"
-                },
-                {
-                    "5.1": "https://i.imgur.com/BvxdIRq.png",
-                    "5.2": "https://i.imgur.com/R9jWmQR.png",
-                    "5.3": "https://i.imgur.com/ZnBZ36C.png",
-                    "5.4": "https://i.imgur.com/hiX8inA.png",
-                    "5.5": "https://i.imgur.com/aiWiA6t.png"
-                },
-                {
-                    "6.1": "https://i.imgur.com/u2Dabmo.png",
-                    "6.2": "https://i.imgur.com/SE9CgQ5.png",
-                    "6.3": "https://i.imgur.com/CGKLf2W.png",
-                    "6.4": "https://i.imgur.com/sfptyVT.png",
-                    "6.5": "https://i.imgur.com/Pwz3Yyy.png"
-                },
-                {
-                    "7.1": "https://i.imgur.com/2XeuGgh.png",
-                    "7.2": "https://i.imgur.com/qJXJTKQ.png",
-                    "7.3": "https://i.imgur.com/Q9qTJfo.png",
-                    "7.4": "https://i.imgur.com/PAqV0fG.png",
-                    "7.5": "https://i.imgur.com/IfqwZCf.png"
-                },
-                {
-                    "8.1": "https://i.imgur.com/0FhFO0X.png",
-                    "8.2": "https://i.imgur.com/bJ4o0Lq.png",
-                    "8.3": "https://i.imgur.com/SnG6V50.png",
-                    "8.4": "https://i.imgur.com/LHbFlnr.png",
-                    "8.5": "https://i.imgur.com/rjdGBI1.png"
-                },
-                {
-                    "9.1": "https://i.imgur.com/lSVZR0A.png",
-                    "9.2": "https://i.imgur.com/M3SlauI.png",
-                    "9.3": "https://i.imgur.com/NqV7hfP.png",
-                    "9.4": "https://i.imgur.com/tC2cYwM.png",
-                    "9.5": "https://i.imgur.com/odZFbVe.png"
-                },
-                {
-                    "10.1": "https://i.imgur.com/ZImR5zZ.png",
-                    "10.2": "https://i.imgur.com/av3ghl3.png",
-                    "10.3": "https://i.imgur.com/L6pGtQg.png",
-                    "10.4": "https://i.imgur.com/Rku91Cv.png",
-                    "10.5": "https://i.imgur.com/0L3cGEm.png"
-                }
-            ],
-            "location": "DM"
-        },
-        {
             "display_name": "Scape Smarts",
             "name": "scape_smarts",
             "type": "trivia",
@@ -254,8 +173,7 @@
                     "q": "Name 3 Gods you would not find in the God Wars Dungeon.\nThat is, not any of Guthix, Saradomin, Zamorak, Armadyl, Bandos, or Zaros.\nAnswer with a comma-separated list.",
                     "a": [
                         "Tumeken", "Elidinis", "Icthlarin", "Amascut", "Apmeken", 
-                        "Crondis", "Het", "Scabaras", "Ralos", "Ranul", "Jas", "Ful", 
-                        "Mother of Seren", "Marimbo", "Brassica Prime", "V", "Karamajan gods"
+                        "Crondis", "Het", "Scabaras", "Ralos", "Ranul", "Jas", "Ful", "Seren", "Mother of Seren", "Marimbo", "Brassica Prime", "V", "Karamajan gods"
                     ],
                     "type": "list_any_count",
                     "min_count": 3
@@ -310,7 +228,7 @@
             "name": "alchemy_old_school_magic",
             "type": "race",
             "duration": "60",
-            "rules": "You have 60 minutes to create as much high alch value as possible. You start in (LOCATION) with nothing in your inventory. Submit a screenshot of your final gold pile.",
+            "rules": "You have 60 minutes to create as much high alch value as possible. You start in Tree Gnome Stronghold, in the Grand Tree with nothing in your inventory. Submit a screenshot of your final haul.\n\nBanking: Your bank is only accessible to pull out Nature Runes to alch items if you have too many items in your inventory.\nPOH: Your POH cannot be used for this challenge.",
             "title_card": "https://i.imgur.com/GaMumuf.png"
                             
         },
@@ -319,7 +237,7 @@
             "name": "spawn_camping",
             "type": "race",
             "duration": "60",
-            "rules": "You have 60 minutes to unscramble the list of anagrams and find the item spawns. Beginning at Lumbridge spawn, match your inventory to the photo provided. Share a screenshot of your inventory when you finish.",
+            "rules": "You have 60 minutes to unscramble the list of anagrams and find the item spawns. Begin at the Lumbridge spawn with the Standard Teleports Loadout shared in the events channel. Share a screenshot of your inventory when you finish.\n\nBanking: Access to your bank is prohibited during this challenge.\nPOH: Your POH cannot be used for this challenge.",
             "title_card": "https://i.imgur.com/HfdPwDx.png",
             "information": [
                 "dark tan",
@@ -364,87 +282,87 @@
             "display_name": "EXP Share the Love",
             "name": "exp_share_the_love",
             "type": "speed_run",
-            "rules": "Gain experience in every skill as quickly as possible. Reset your EXP Tracker to start, and submit a screenshot of the tracker when you finish.",
+            "rules": "Gain experience in every skill as quickly as possible. Reset your EXP Tracker to start, and submit a screenshot of the tracker when you finish.\n\nBanking: Access to your bank is prohibited during this challenge.\nPOH: Your POH cannot be used for this challenge.",
             "title_card": "https://i.imgur.com/mbBzgxU.png"
         },
         {
             "display_name": "Pea's Place",
             "name": "peas_place",
             "type": "speed_run",
-            "rules": "Find each location as quickly as possible. You will be given a zoomed-in screenshot of my character standing somewhere. Every X minutes, you will get 10% more of the zoomed-out screenshot. Submit a screenshot to finish each location. You can skip a stage with !skip, but you'll receive a score of 10 minutes or your time + 5 minutes, whichever is longer at the time of the skip.",
+            "rules": "Find each location as quickly as possible. You will be given a zoomed-in screenshot of my character standing somewhere. Every 5 minutes, you will get more of the zoomed-out screenshot. Submit a screenshot of your character standing on the same tile to finish each location. You can skip a stage with !skip, but you'll receive a score of 10 minutes or your time + 5 minutes, whichever is longer at the time of the skip.",
             "title_card": "https://i.imgur.com/TbI1kwC.png",
             "skip": "yes",
             "information": [
-                {
-                    "1.1": "https://i.imgur.com/aWjPhJ3.png",
-                    "1.2": "https://i.imgur.com/zRmCa1i.png",
-                    "1.3": "https://i.imgur.com/77DV9YI.png",
-                    "1.4": "https://i.imgur.com/ido014d.png",
-                    "1.5": "https://i.imgur.com/AR0J5Ey.png"
-                },
-                {
-                    "2.1": "https://i.imgur.com/RJp0d6F.png",
-                    "2.2": "https://i.imgur.com/0JAmsMA.png",
-                    "2.3": "https://i.imgur.com/3olOT7O.png",
-                    "2.4": "https://i.imgur.com/zaILoS1.png",
-                    "2.5": "https://i.imgur.com/epnXON5.png"
-                },
-                {
-                    "3.1": "https://i.imgur.com/JYhd4uf.png",
-                    "3.2": "https://i.imgur.com/QwBqDBd.png",
-                    "3.3": "https://i.imgur.com/p5pHjUV.png",
-                    "3.4": "https://i.imgur.com/mckkMhG.png",
-                    "3.5": "https://i.imgur.com/8OzK9FE.png"
-                },
-                {
-                    "4.1": "https://i.imgur.com/EuJtruq.png",
-                    "4.2": "https://i.imgur.com/FRrnSYH.png",
-                    "4.3": "https://i.imgur.com/WlDRIR0.png",
-                    "4.4": "https://i.imgur.com/IMIHdwL.png",
-                    "4.5": "https://i.imgur.com/4IdmNHe.png"
-                },
-                {
-                    "5.1": "https://i.imgur.com/BvxdIRq.png",
-                    "5.2": "https://i.imgur.com/R9jWmQR.png",
-                    "5.3": "https://i.imgur.com/ZnBZ36C.png",
-                    "5.4": "https://i.imgur.com/hiX8inA.png",
-                    "5.5": "https://i.imgur.com/aiWiA6t.png"
-                },
-                {
-                    "6.1": "https://i.imgur.com/u2Dabmo.png",
-                    "6.2": "https://i.imgur.com/SE9CgQ5.png",
-                    "6.3": "https://i.imgur.com/CGKLf2W.png",
-                    "6.4": "https://i.imgur.com/sfptyVT.png",
-                    "6.5": "https://i.imgur.com/Pwz3Yyy.png"
-                },
-                {
-                    "7.1": "https://i.imgur.com/2XeuGgh.png",
-                    "7.2": "https://i.imgur.com/qJXJTKQ.png",
-                    "7.3": "https://i.imgur.com/Q9qTJfo.png",
-                    "7.4": "https://i.imgur.com/PAqV0fG.png",
-                    "7.5": "https://i.imgur.com/IfqwZCf.png"
-                },
-                {
-                    "8.1": "https://i.imgur.com/0FhFO0X.png",
-                    "8.2": "https://i.imgur.com/bJ4o0Lq.png",
-                    "8.3": "https://i.imgur.com/SnG6V50.png",
-                    "8.4": "https://i.imgur.com/LHbFlnr.png",
-                    "8.5": "https://i.imgur.com/rjdGBI1.png"
-                },
-                {
-                    "9.1": "https://i.imgur.com/lSVZR0A.png",
-                    "9.2": "https://i.imgur.com/M3SlauI.png",
-                    "9.3": "https://i.imgur.com/NqV7hfP.png",
-                    "9.4": "https://i.imgur.com/tC2cYwM.png",
-                    "9.5": "https://i.imgur.com/odZFbVe.png"
-                },
-                {
-                    "10.1": "https://i.imgur.com/ZImR5zZ.png",
-                    "10.2": "https://i.imgur.com/av3ghl3.png",
-                    "10.3": "https://i.imgur.com/L6pGtQg.png",
-                    "10.4": "https://i.imgur.com/Rku91Cv.png",
-                    "10.5": "https://i.imgur.com/0L3cGEm.png"
-                }
+                [
+                    "https://i.imgur.com/aWjPhJ3.png",
+                    "https://i.imgur.com/zRmCa1i.png",
+                    "https://i.imgur.com/77DV9YI.png",
+                    "https://i.imgur.com/ido014d.png",
+                    "https://i.imgur.com/AR0J5Ey.png"
+                ],
+                [
+                    "https://i.imgur.com/RJp0d6F.png",
+                    "https://i.imgur.com/0JAmsMA.png",
+                    "https://i.imgur.com/3olOT7O.png",
+                    "https://i.imgur.com/zaILoS1.png",
+                    "https://i.imgur.com/epnXON5.png"
+                ],
+                [
+                    "https://i.imgur.com/JYhd4uf.png",
+                    "https://i.imgur.com/QwBqDBd.png",
+                    "https://i.imgur.com/p5pHjUV.png",
+                    "https://i.imgur.com/mckkMhG.png",
+                    "https://i.imgur.com/8OzK9FE.png"
+                ],
+                [
+                    "https://i.imgur.com/EuJtruq.png",
+                    "https://i.imgur.com/FRrnSYH.png",
+                    "https://i.imgur.com/WlDRIR0.png",
+                    "https://i.imgur.com/IMIHdwL.png",
+                    "https://i.imgur.com/4IdmNHe.png"
+                ],
+                [
+                    "https://i.imgur.com/BvxdIRq.png",
+                    "https://i.imgur.com/R9jWmQR.png",
+                    "https://i.imgur.com/ZnBZ36C.png",
+                    "https://i.imgur.com/hiX8inA.png",
+                    "https://i.imgur.com/aiWiA6t.png"
+                ],
+                [
+                    "https://i.imgur.com/u2Dabmo.png",
+                    "https://i.imgur.com/SE9CgQ5.png",
+                    "https://i.imgur.com/CGKLf2W.png",
+                    "https://i.imgur.com/sfptyVT.png",
+                    "https://i.imgur.com/Pwz3Yyy.png"
+                ],
+                [
+                    "https://i.imgur.com/2XeuGgh.png",
+                    "https://i.imgur.com/qJXJTKQ.png",
+                    "https://i.imgur.com/Q9qTJfo.png",
+                    "https://i.imgur.com/PAqV0fG.png",
+                    "https://i.imgur.com/IfqwZCf.png"
+                ],
+                [
+                    "https://i.imgur.com/0FhFO0X.png",
+                    "https://i.imgur.com/bJ4o0Lq.png",
+                    "https://i.imgur.com/SnG6V50.png",
+                    "https://i.imgur.com/LHbFlnr.png",
+                    "https://i.imgur.com/rjdGBI1.png"
+                ],
+                [
+                    "https://i.imgur.com/lSVZR0A.png",
+                    "https://i.imgur.com/M3SlauI.png",
+                    "https://i.imgur.com/NqV7hfP.png",
+                    "https://i.imgur.com/tC2cYwM.png",
+                    "https://i.imgur.com/odZFbVe.png"
+                ],
+                [
+                    "https://i.imgur.com/ZImR5zZ.png",
+                    "https://i.imgur.com/av3ghl3.png",
+                    "https://i.imgur.com/L6pGtQg.png",
+                    "https://i.imgur.com/Rku91Cv.png",
+                    "https://i.imgur.com/0L3cGEm.png"
+                ]
             ],
             "location": "DM"
         },
@@ -464,7 +382,7 @@
             "display_name": "Chronic Wasting Disease",
             "name": "chronic_wasting_disease",
             "type": "survival",
-            "rules": "Survive against Corrupted Hunllef for as long as possible. Drop everything in your inventory and enter directly into the fight. No gear, no food, no attacking. Just run and pray.",
+            "rules": "Survive against Corrupted Hunllef for as long as possible. Drop everything in your inventory and enter directly into the fight. No gear, no food, no attacking. Just run and pray.\n\nYour time should be calculated by the bot from the difference in time between your !start and !finish commands. For safety, you might want to submit a screenshot of a timer.",
             "title_card": "https://i.imgur.com/5G8xIx4.png"
         },
         {
@@ -486,7 +404,7 @@
             "display_name": "Final Examine",
             "name": "final_examine",
             "type": "speed_run",
-            "rules": "Find the NPC or Item described by the given Examine text as quickly as possible. Submit a screenshot of you standing with the target along with your !next command. You can skip a stage with !skip, but you'll receive a score of 10 minutes or your time + 5 minutes, whichever is longer at the time of the skip.",
+            "rules": "Find the NPC or Item described by the given Examine text as quickly as possible. Submit a screenshot of you standing with the target along with your !next command. You can skip a stage with !skip, but you'll receive a time penalty for each skip.",
             "title_card": "https://i.imgur.com/RwaFd5o.png",
             "skip": "yes",
             "information":{
