@@ -528,21 +528,47 @@ class UserCommands(commands.Cog):
         # Handle skipping based on challenge type
         challenge_data = self.db.get_user_challenge_data(active_event, user_id, challenge['name'])
         
-        if challenge['type'] == 'speed_run' and 'information' in challenge:
+        # Special case for Pea's Place
+        if challenge['name'] ==  'peas_place':
+            # Skip stage for location
+            logger.debug(f"{ctx.author} skipped stage in the Pea's Place function")
             information = challenge.get('information', {})
             current_stage = challenge_data.get('stage', '1')
-            next_stage = str(int(current_stage) + 1)
-            
-            if next_stage in information:
+            next_stage = str(float(current_stage) + 0.1)
+            logger.debug(f"next_stage: {next_stage}")
+            logger.debug(f"information: {information}")
+            logger.debug(f"next_stage in location for location in information: {any(next_stage in location for location in information)}")
+
+            if any(next_stage in location for location in information):
                 challenge_data['stage'] = next_stage
                 self.db.save_database()
                 
                 # Get handler and send next info
                 handler = self.challenge_factory.get_handler(challenge)
-                await handler.send_speed_run_info(ctx.author, challenge, next_stage)
+                # await handler.send_speed_run_info(ctx.author, challenge, next_stage)
+                await handler.send_peas_place_media(self, ctx.author, challenge, next_stage, active_event)
                 await ctx.send("⏭️ Skipped to next stage.")
             else:
                 await ctx.send("🏁 You're already at the final stage!")
+
+
+        else:
+            if challenge['type'] == 'speed_run' and 'information' in challenge:
+                logger.debug(f"{ctx.author} skipped stage in {challenge['display_name']}")
+                information = challenge.get('information', {})
+                current_stage = challenge_data.get('stage', '1')
+                next_stage = str(int(current_stage) + 1)
+                
+                if next_stage in information:
+                    challenge_data['stage'] = next_stage
+                    self.db.save_database()
+                    
+                    # Get handler and send next info
+                    handler = self.challenge_factory.get_handler(challenge)
+                    await handler.send_speed_run_info(ctx.author, challenge, next_stage)
+                    await ctx.send("⏭️ Skipped to next stage.")
+                else:
+                    await ctx.send("🏁 You're already at the final stage!")
         
         logger.info(f"{ctx.author} used skip in challenge {challenge['display_name']}")
 
