@@ -507,39 +507,36 @@ class PeasPlaceHandler(BaseChallengeHandler):
         logger.info(f"Attempting to advance stage for user {user_id} from {current_stage}")
         
         try:
-            category, sub_stage = current_stage.split('.')
-            current_stage_num = int(sub_stage)
-            next_stage_num = current_stage_num + 1
+            location_index, stage_index = self._parse_stage(current_stage)
+            next_stage_index = stage_index + 1
             
-            # Check if there's a next stage within this location (max 5 stages per location)
-            if next_stage_num <= 5:
-                next_stage = f"{category}.{next_stage_num}"
+            # Check if there's a next stage within this location
+            information = challenge.get('information', [])
+            if (location_index < len(information) and 
+                isinstance(information[location_index], list) and 
+                next_stage_index < len(information[location_index])):
                 
-                # Verify the media exists for this stage
-                if self._stage_exists(challenge, category, str(next_stage_num)):
-                    # Update to next stage within same location
-                    challenge_data['stage'] = next_stage
-                    challenge_data['last_stage_time'] = datetime.datetime.now(datetime.UTC)
-                    self.db.save_database()
-                    
-                    logger.info(f"Advanced {user_id} from {current_stage} to {next_stage}")
-                    
-                    # Send the next clue
-                    success = await self.send_peas_place_media(user, challenge, category, str(next_stage_num), event_id)
-                    if success:
-                        await self.send_dm_safely(
-                            user,
-                            f"🔍 **Here's a better view of location {category}** (Clue {next_stage_num}/5)"
-                        )
-                        return True
-                    else:
-                        logger.error(f"Failed to send media for stage {next_stage}")
-                        return False
+                # Update to next stage within same location
+                next_stage = f"{location_index + 1}.{next_stage_index + 1}"  # Convert back to 1-based
+                challenge_data['stage'] = next_stage
+                challenge_data['last_stage_time'] = datetime.datetime.now(datetime.UTC)
+                self.db.save_database()
+                
+                logger.info(f"Advanced {user_id} from {current_stage} to {next_stage}")
+                
+                # Send the next clue
+                success = await self.send_peas_place_media(user, challenge, str(location_index + 1), str(next_stage_index + 1), event_id)
+                if success:
+                    await self.send_dm_safely(
+                        user,
+                        f"🔍 **Here's a better view of location {location_index + 1}** (Clue {next_stage_index + 1}/{len(information[location_index])})"
+                    )
+                    return True
                 else:
-                    logger.info(f"No more stages available for location {category} after stage {current_stage_num}")
+                    logger.error(f"Failed to send media for stage {next_stage}")
                     return False
             else:
-                logger.info(f"Location {category} has reached maximum stages (5)")
+                logger.info(f"No more stages available for location {location_index + 1} after stage {stage_index + 1}")
                 return False
                 
         except Exception as e:
@@ -555,10 +552,29 @@ class PeasPlaceHandler(BaseChallengeHandler):
     
     def _location_exists(self, challenge: Dict, location_number: int) -> bool:
         """Check if a specific location exists"""
-        target_key = f"{location_number}.1"
-        exists = self._find_media_url(challenge, target_key) is not None
-        logger.debug(f"Location exists check: {target_key} = {exists}")
+        information = challenge.get('information', [])
+        location_index = location_number - 1  # Convert to 0-based
+        
+        exists = (0 <= location_index < len(information) and 
+                isinstance(information[location_index], list) and 
+                len(information[location_index]) > 0)
+        
+        logger.debug(f"Location exists check: location {location_number} (index {location_index}) = {exists}")
         return exists
+    
+    def _parse_stage(self, stage_str: str) -> tuple[int, int]:
+        """
+        Parse stage string like '1.1' into location and stage indices
+        Returns: (location_index, stage_index) both 0-based
+        """
+        try:
+            location, stage = stage_str.split('.')
+            location_index = int(location) - 1  # Convert to 0-based index
+            stage_index = int(stage) - 1        # Convert to 0-based index
+            return location_index, stage_index
+        except (ValueError, IndexError) as e:
+            logger.error(f"Invalid stage format '{stage_str}': {e}")
+            return 0, 0
     
     async def send_peas_place_media(self, user: discord.User, challenge: Dict, category: str, stage: str, event_id: str) -> bool:
         """
@@ -606,23 +622,36 @@ class PeasPlaceHandler(BaseChallengeHandler):
     
     def _find_media_url(self, challenge: Dict, media_key: str) -> Optional[str]:
         """
-        Enhanced media URL lookup with comprehensive logging
+        Enhanced media URL lookup using list-of-lists structure
+        media_key format: "1.1" = location 1, stage 1
         """
         information = challenge.get('information', [])
-        logger.debug(f"Searching for media key '{media_key}' in {len(information)} information objects")
+        logger.debug(f"Searching for media key '{media_key}' in {len(information)} location lists")
         
-        for i, info_item in enumerate(information):
-            if isinstance(info_item, dict):
-                logger.debug(f"Information object {i} contains keys: {list(info_item.keys())}")
-                if media_key in info_item:
-                    media_url = info_item[media_key]
-                    logger.debug(f"Found media URL for {media_key}: {media_url}")
-                    return media_url
-            else:
-                logger.warning(f"Information object {i} is not a dictionary: {type(info_item)}")
-        
-        logger.warning(f"Media key '{media_key}' not found in any information object")
-        return None
+        try:
+            location_index, stage_index = self._parse_stage(media_key)
+            
+            # Validate indices are within bounds
+            if location_index < 0 or location_index >= len(information):
+                logger.warning(f"Location index {location_index} out of bounds for {len(information)} locations")
+                return None
+            
+            location_list = information[location_index]
+            if not isinstance(location_list, list):
+                logger.warning(f"Location {location_index} is not a list: {type(location_list)}")
+                return None
+            
+            if stage_index < 0 or stage_index >= len(location_list):
+                logger.warning(f"Stage index {stage_index} out of bounds for location {location_index} with {len(location_list)} stages")
+                return None
+            
+            media_url = location_list[stage_index]
+            logger.debug(f"Found media URL for {media_key}: {media_url}")
+            return media_url
+            
+        except Exception as e:
+            logger.error(f"Error accessing media for key '{media_key}': {e}")
+            return None
     
     async def finish_challenge(self, user: discord.User, challenge: Dict, event_id: str, user_id: str):
         """Complete Pea's Place challenge with celebration"""
@@ -671,7 +700,7 @@ class ChallengeHandlerFactory:
         }
     
     def get_handler(self, challenge: Dict) -> BaseChallengeHandler:
-        """Get appropriate handler for a challenge"""
+        """Get an appropriate handler for a challenge"""
         # Special case for Pea's Place regardless of type
         if challenge['name'] == 'peas_place':
             return self.handlers['peas_place']
